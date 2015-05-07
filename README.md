@@ -11,7 +11,7 @@ the speakers in a connected HDMI device or AirPlay, but I never liked using
 the right pactl/pacmd command.
 
 So I made these scripts to integrate pulseaudio much nicer into my setup
-(ArchLinux+Awesome_VM btw).
+(ArchLinux+AwesomeVM btw).
 
 
 Notes
@@ -33,7 +33,7 @@ sources to an output device.
 To make it all Awesome
 ======================
 
-I have include at lua-snippet to put in your AwesomeVM rc.lau. This will
+I have include at lua-snippet to put in your AwesomeVM rc.lua. This will
 display a list under the cursor for you to select the output device. Remember
 to update the awful.key to something that makes sense for you, and put
 paselector somewhere Awesome can find it (e.g. cp or symlink paselector.sh to
