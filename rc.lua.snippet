@@ -1,0 +1,12 @@
+    awful.key({ modkey,           }, "u",
+        function () 
+		sinks = {}
+		for line in string.gmatch(awful.util.pread("paselector list"), "[^\n]+") do
+			local sink_no   = line:sub(0,string.find(line,"\t"))
+			local sink_desc = line:sub(string.find(line,"\t")+1,line:len())
+			table.insert(sinks, { sink_desc, function() awful.util.spawn_with_shell("paselector move " .. sink_no ) end})
+		end
+
+		mypaselector = awful.menu.new( { items = sinks, theme = { width = 300, } } )
+		mypaselector:show()
+	end),
