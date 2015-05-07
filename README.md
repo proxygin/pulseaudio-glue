@@ -8,7 +8,7 @@ and without restarting the stream.
 All this is great if you find yourself switching between a bluetooth headset,
 the speakers in a connected HDMI device or AirPlay, but I never liked using
 `pavucontrol` and you will have died of old age before being done typing
-the right pactl/pacmd command.
+the right `pactl`/`pacmd` command.
 
 So I made these scripts to integrate pulseaudio much nicer into my setup
 (ArchLinux+AwesomeVM btw).
@@ -33,8 +33,11 @@ sources to an output device.
 To make it all Awesome
 ======================
 
-I have include at lua-snippet to put in your AwesomeVM rc.lua. This will
-display a list under the cursor for you to select the output device. Remember
-to update the awful.key to something that makes sense for you, and put
-paselector somewhere Awesome can find it (e.g. cp or symlink paselector.sh to
-/usr/bin/paselector).  
+I have include at lua-snippet to put in your AwesomeVM rc.lua.
+For `paselector` it will display a list under the cursor for you to select an
+output device from. Remember to update the awful.key to something that makes
+sense for you, and put paselector somewhere Awesome can find it (e.g. cp or
+symlink paselector.sh to /usr/bin/paselector).
+Use the `Xf86Audio...`-buttons for volume control. (`xev` can be used to figure
+out the keycodes)
+

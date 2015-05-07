@@ -10,3 +10,6 @@
 		mypaselector = awful.menu.new( { items = sinks, theme = { width = 300, } } )
 		mypaselector:show()
 	end),
+    awful.key({ }, "#121", function () awful.util.spawn("pavol mute") end),
+    awful.key({ }, "#122", function () awful.util.spawn("pavol -") end),
+    awful.key({ }, "#123", function () awful.util.spawn("pavol +") end),
